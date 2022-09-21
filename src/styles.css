@@ -1,0 +1,76 @@
+body {
+    color: #CD3C38;
+    background-color: #cd7771;
+}
+.text {
+    color: black;
+}
+.float{
+    float: right;
+}
+.hori{
+    color: black;
+    margin: auto;
+}
+
+.image{
+    margin-right: 20px;
+}
+.fab{
+    margin-top: 20px;
+}
+.button{
+    border-radius: 20px;
+}
+.left{
+    margin-left: 50%;
+}
+.bar{
+    color: #CD3C38;
+    background-color: white;
+}
+.space {
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.redround{
+    background-color: #CD3C38;
+}
+.whiteround{
+    background-color: white;
+}
+.whitegap{
+    background-color: white;
+    margin-left: 20px;
+}
+.div {
+    background-color: #CD3C38;
+    margin-top: 16px;
+}
+.upperstack {
+    background-color: #CD3C38;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.stack {
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.names {
+    margin-left:10px;
+    letter-spacing: 4px;
+    font-size: 20px;
+    vertical-align: top;
+}
+.dtp{
+    border-width: 0;
+}
+.far{
+    margin: auto;
+    margin-top: 100px;
+    background-color: #CD3C38;
+}
+.login{
+    margin: auto;
+}
