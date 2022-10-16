@@ -16,6 +16,7 @@ import {
 import Header from './Header'
 import Primary from './Primary'
 import Login from './Login'
+import Multimodal from './Multimodal';
 
 // import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path = '/' element = {<Primary/>}/>
             <Route path = '/login' element = {<Login/>}/>
+            <Route path = '/multimodal' element = {<Multimodal/>}/>
           </Routes>
         </Router>
       </div>

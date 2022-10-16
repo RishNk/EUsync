@@ -31,7 +31,7 @@ function Header() {
             {Logo}
             <Stack direction={'row'} spacing = {6} className = 'left'>
               <Fabs text = 'Search' href = '/' />
-              <Fabs text = '.'/>
+              <Fabs text = 'MultiModal' href = '/Multimodal'/>
               <Fabs text = '.'/>
               <Fabs text = 'login' href = '/login' />
             </Stack>

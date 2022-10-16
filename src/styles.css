@@ -12,7 +12,10 @@ body {
     color: black;
     margin: auto;
 }
-
+.topspace{
+    margin-top:100px;
+    background-color: #CD3C38;
+}
 .image{
     margin-right: 20px;
 }
@@ -62,6 +65,25 @@ body {
     letter-spacing: 4px;
     font-size: 20px;
     vertical-align: top;
+}
+
+input::-webkit-clear-button {
+    display: none;
+}
+
+.namess{
+    margin:auto;
+    margin-left: 0px;
+    margin-right: 20px;
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: white;
+}
+.namesss{
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: white;
+    display: flex;
 }
 .dtp{
     border-width: 0;
