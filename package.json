@@ -3,16 +3,21 @@
   "version": "5.0.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
-    "@mui/material": "latest",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.12",
     "@mui/x-date-pickers": "^5.0.1",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "dayjs": "^1.11.5",
+    "leaflet": "^1.9.2",
+    "maplibre-gl": "^1.15.3",
     "moment": "^2.29.4",
+    "ol": "^7.1.0",
     "react": "latest",
-    "react-dom": "latest",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.1.0",
     "react-router-dom": "^6.4.0",
     "react-scripts": "latest",
     "react-transition-group": "^4.4.5",
@@ -35,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.10",
+    "@types/openlayers": "^4.6.18"
   }
 }

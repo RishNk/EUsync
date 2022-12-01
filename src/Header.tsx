@@ -1,10 +1,10 @@
 import * as React from 'react'
-import {Toolbar, Stack, Fab, Typography, AppBar} from '@mui/material'
+import {Toolbar, Stack, Fab, Typography, AppBar, Select, MenuItem} from '@mui/material'
 import {ThemeProvider, createTheme} from '@mui/material/styles'
 import logo from './eusync.png';
 import { useNavigate, Link } from 'react-router-dom';
-
-
+import SearchIcon from '@mui/icons-material/Search';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const theme = createTheme({
     palette: {
@@ -23,6 +23,12 @@ const theme = createTheme({
   }
 
 function Header() {
+    const [language, setLanguage] = React.useState('English')
+
+    const handleLanguage = (event: any) => {
+      setLanguage(event.target.value as string);
+    };
+
     const displayDesktop = () => {
       return (
         <ThemeProvider theme = {theme}>
@@ -30,10 +36,27 @@ function Header() {
             <img src = {logo} width = '40px' className = 'image'></img>
             {Logo}
             <Stack direction={'row'} spacing = {6} className = 'left'>
-              <Fabs text = 'Search' href = '/' />
-              <Fabs text = 'MultiModal' href = '/Multimodal'/>
-              <Fabs text = '.'/>
-              <Fabs text = 'login' href = '/login' />
+            <Fab color = 'primary' href = {'/'}>
+              <SearchIcon/>
+            </Fab>
+            <Fab color = 'primary' href = {'/Multimodal'}>
+              <SearchIcon/>
+            </Fab>
+            <Fab color = 'primary' href = {'/'}>
+              <SearchIcon/>
+            </Fab>
+            <Fab color = 'primary' href = {'/login'}>
+              <AccountCircleIcon/>
+            </Fab>
+              <Select
+                value = {language}
+                label = 'language'
+                onChange = {handleLanguage}
+              >
+                <MenuItem value={'English'}>English</MenuItem>
+                <MenuItem value={'French'}>French</MenuItem>
+                <MenuItem value={'German'}>German</MenuItem>
+              </Select>
             </Stack>
           </Toolbar>
         </ThemeProvider>

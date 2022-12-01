@@ -1,6 +1,64 @@
+@import '~maplibre-gl/dist/maplibre-gl.css';
+* {
+    font-family: Helvetica;
+  }
+
 body {
     color: #CD3C38;
     background-color: #cd7771;
+    margin-top:100px;
+}
+.mainWrapper{
+    display: grid;
+    width: 80%;
+  grid-template-columns: 3fr 10px 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 10px;
+  grid-template-areas: 'searching blank map'
+}
+
+
+.header{
+    margin-left:20px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    vertical-align: top;
+}
+.from{
+    margin-top: 10px;
+    grid-area: from;
+    margin-left:10px;
+}
+.to{
+    margin-top: 10px;
+    margin-left:10px;
+    grid-area: to;
+}
+.outbound{
+    background-color: white;
+    margin-left:10px;
+    grid-area: outbound;
+    border-radius: 16px;
+    padding-bottom: 10px;
+}
+.inbound{
+    background-color: white;
+    margin-right:10px;
+    grid-area: inbound;
+    border-radius: 16px;
+}
+.swap{
+    grid-area: swap;
+}
+.optionsToggle{
+    grid-area: optionsToggle;
+    color: black;
+}
+.options{
+    grid-area: options;
+}
+.submit{
+    grid-area: submit;
 }
 .text {
     color: black;
@@ -26,14 +84,24 @@ body {
     border-radius: 20px;
 }
 .left{
-    margin-left: 50%;
+    margin-left: 30%;
 }
+.leftmargin{
+    margin-left: 20px;
+}
+.map{
+    margin-top: 36.5px;
+    width:420px;
+    height:420px;
+    background-color: #CD3C38;
+    grid-area: map;
+}
+
 .bar{
     color: #CD3C38;
     background-color: white;
 }
 .space {
-    margin-top: 100px;
     margin-left: 10px;
 }
 .redround{
@@ -46,9 +114,15 @@ body {
     background-color: white;
     margin-left: 20px;
 }
-.div {
+.search {
     background-color: #CD3C38;
-    margin-top: 16px;
+    margin-top: 0px;
+}
+.searching{
+    grid-area: searching;
+}
+.root{
+    margin-top: 50px;
 }
 .upperstack {
     background-color: #CD3C38;
@@ -59,6 +133,9 @@ body {
     background-color: white;
     margin-left: 20px;
     margin-right: 20px;
+}
+.width {
+    min-width: 100%;
 }
 .names {
     margin-left:10px;
@@ -86,7 +163,12 @@ input::-webkit-clear-button {
     display: flex;
 }
 .dtp{
-    border-width: 0;
+    /* border-width: 0; */
+    margin-left: 0px;
+    width: 40%;
+}
+.date{
+    font-size: 10px;
 }
 .far{
     margin: auto;

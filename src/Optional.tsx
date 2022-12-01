@@ -7,35 +7,49 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import dayjs, { Dayjs } from 'dayjs';
 import logo from './eusync.png';
 import './styles.css';
+import { DesktopDatePicker } from '@mui/x-date-pickers';
+import { TimePicker } from '@mui/x-date-pickers';
 
 function Optional (props: any){
     if (true) {
       return (
-        <>
-          <Grid item xs = {5}>
-                  <Stack spacing = {1} className = {'stack'} width = {'80%'}>
-                    <Collapse in = {!props.page}>
-                    <p className='names'>Return</p>
-                    <DateTimePicker
-                    renderInput={(props) => <TextField {...props} />}
-                    label="date"
-                    disabled = {props.checked}
-                    value={props.inValue}
-                    onChange={(newValue) => {
-                      props.setInValue(newValue);
-                    }}
-                  />
-                  
-                    </Collapse>
-                    
-                  </Stack>
-                
-                    <Collapse in = {!props.page}>
+        <Collapse in = {!props.page} className = 'inbound'>
+        ${!props.page && (<div className='width'>
+                    <Stack spacing = {1} direction = 'row'>
+                    <p className='header'>Return</p>
                     <FormControlLabel control={<Switch checked = {props.checked} onChange = {props.handleChange} />} className = 'text' label="Open Return" />
-                    </Collapse>
+                    </Stack>
+                    <DesktopDatePicker
+                className='dtp'
+                renderInput={(props) => <TextField {...props} sx={{ ml: 2 }} style = {{fontSize:10}}/>}
+                label="date"
+                disabled = {props.checked}
+                value={props.inValue}
+                onChange={(newValue) => {
+                  props.setInValue(newValue);
+                }}
+                
+              />
+              <TimePicker
+                className='dtp'
+                renderInput={(props) => <TextField {...props} sx={{ ml: 2 }} label = 'date'/>}
+                label="time"
+                disabled = {props.checked}
+                value={props.inValue}
+                onChange={(newValue) => {
+                  props.setInValue(newValue);
+                }}
+              />
                   
-                </Grid>
-        </>
+                    
+                    
+                
+                    
+                    
+                  
+                
+        </div>)}
+        </Collapse>
       )
     }
     else {
